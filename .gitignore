@@ -1,0 +1,60 @@
+# === Rust ===
+/target/
+**/target/
+**/*.rs.bk
+Cargo.lock
+Cargo.*.backup
+*.rlib
+*.dSYM
+*.o
+*.so
+*.dll
+*.d
+*.exe
+*.log
+
+# === Node/SvelteKit ===
+**/node_modules/
+**/.svelte-kit/
+**/.turbo/
+**/.vite/
+**/dist/
+pnpm-lock.yaml
+yarn.lock
+npm-debug.log
+.env
+.env.*.local
+.vscode/
+.next/
+*.tsbuildinfo
+
+# === TurboRepo cache ===
+**/.turbo/
+turbo/
+
+# === Docker ===
+**/.dockerignore
+**/Dockerfile
+**/docker-compose.*
+**/.env
+**/pgdata/
+**/dbdata/
+
+# === System Files ===
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+*.bak
+
+# === Logs ===
+logs/
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# === Misc ===
+*.tgz
+*.lock
