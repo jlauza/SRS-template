@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  backend:
+    build: ./apps/backend
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./apps/backend/.env
+    depends_on:
+      - db
+
+  # frontend:
+  #   build:
+  #     context: ./apps/frontend
+  #   ports:
+  #     - "5173:5173"
+  #   volumes:
+  #     - ./apps/frontend:/app
+  #   depends_on:
+  #     - backend
+
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret12==
+      POSTGRES_DB: srs_backend
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

@@ -33,9 +33,6 @@ npm-debug.log
 turbo/
 
 # === Docker ===
-**/.dockerignore
-**/Dockerfile
-**/docker-compose.*
 **/.env
 **/pgdata/
 **/dbdata/
